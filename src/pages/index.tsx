@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
+import { Container } from '@mui/material'
 
 const Home: NextPage = () => {
-  return <div>Hello Goal Measurement</div>
+  return <Container>Hello Goal Measurement</Container>
 }
 
 export default Home
