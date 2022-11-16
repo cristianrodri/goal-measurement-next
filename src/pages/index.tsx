@@ -1,15 +1,30 @@
 import type { NextPage } from 'next'
-import { Typography } from '@mui/material'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Button, Typography } from '@mui/material'
 import { PageLayout } from '@components/PageLayout'
 
 const Home: NextPage = () => {
   return (
-    <PageLayout title="Home | Goal Measurement">
-      <Typography variant="h3" align="center">
+    <PageLayout title="Login">
+      <Typography variant="h3" align="center" color="primary">
         Hello Goal Measurement
       </Typography>
-      <div>Hello Goal Measurement</div>
-      <a href="/login">Login</a>
+      <Button href="/login">Login</Button>
+      <Button href="/login" color="secondary">
+        Signup
+      </Button>
+      <Link href="/" passHref>
+        <Button>
+          <Image
+            src="/logo.svg"
+            width="0"
+            height="0"
+            style={{ width: '200px', height: 'auto' }}
+            alt="logo"
+          />
+        </Button>
+      </Link>
     </PageLayout>
   )
 }
