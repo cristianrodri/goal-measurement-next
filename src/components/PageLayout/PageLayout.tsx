@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import Head from 'next/head'
 import { Container } from '@mui/material'
+import { Logo } from '@components/Logo'
 
 type Props = {
   title: string
@@ -9,10 +10,11 @@ type Props = {
 
 export const PageLayout = ({ title, children }: Props) => {
   return (
-    <Container>
+    <Container maxWidth="lg">
       <Head>
         <title>{title}</title>
       </Head>
+      <Logo />
       {children}
     </Container>
   )
