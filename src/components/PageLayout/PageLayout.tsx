@@ -10,7 +10,14 @@ type Props = {
 
 export const PageLayout = ({ title, children }: Props) => {
   return (
-    <Container maxWidth="lg">
+    <Container
+      maxWidth="lg"
+      sx={{
+        minHeight: '100vh',
+        paddingTop: theme => theme.spacing(2),
+        paddingBottom: theme => theme.spacing(2)
+      }}
+    >
       <Head>
         <title>{title}</title>
       </Head>
