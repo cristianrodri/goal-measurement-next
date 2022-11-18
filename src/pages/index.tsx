@@ -1,14 +1,22 @@
 import type { NextPage } from 'next'
-import { Button } from '@mui/material'
+import { Box, Button } from '@mui/material'
 import { PageLayout } from '@components/PageLayout'
+import { Title } from '@components/pages/homepage/Title'
 
 const Home: NextPage = () => {
   return (
     <PageLayout title="Login">
-      <Button href="/login">Login</Button>
-      <Button href="/login" color="secondary">
-        Signup
-      </Button>
+      <Box px={1}>
+        {/* Title */}
+        <Title />
+        {/* Subtitle */}
+        {/* Actions */}
+        <Button href="/login">Login</Button>
+        <Button href="/login" color="secondary">
+          Signup
+        </Button>
+        {/* Image */}
+      </Box>
     </PageLayout>
   )
 }
