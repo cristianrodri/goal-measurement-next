@@ -15,7 +15,9 @@ export const PageLayout = ({ title, children }: Props) => {
       sx={{
         minHeight: '100vh',
         paddingTop: theme => theme.spacing(2),
-        paddingBottom: theme => theme.spacing(2)
+        paddingBottom: theme => theme.spacing(2),
+        display: 'flex',
+        flexDirection: 'column'
       }}
     >
       <Head>

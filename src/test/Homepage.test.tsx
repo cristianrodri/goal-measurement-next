@@ -10,5 +10,25 @@ describe('Homepage', () => {
     expect(screen.getByText(/goal measurement/i)).toBeInTheDocument()
   })
 
-  it.todo('should render the Subtitle')
+  it('should render the Subtitle', () => {
+    expect(
+      screen.getByRole('heading', {
+        level: 3
+      })
+    ).toBeInTheDocument()
+  })
+
+  it('should render the "Get Started" button', () => {
+    expect(
+      screen.getByRole('link', { name: /get started/i })
+    ).toBeInTheDocument()
+  })
+
+  it('should render the "Login" button', () => {
+    expect(
+      screen.getByRole('link', {
+        name: /login/i
+      })
+    ).toBeInTheDocument()
+  })
 })
