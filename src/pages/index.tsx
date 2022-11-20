@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { NextPage } from 'next'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import { PageLayout } from '@components/PageLayout'
@@ -34,12 +35,16 @@ const Home: NextPage = () => {
           gap={theme => theme.spacing(2)}
           flexWrap="wrap"
         >
-          <Button href="/signup" variant="contained" sx={{ width: 300 }}>
-            Get Started
-          </Button>
-          <Button href="/login" color="secondary" sx={{ width: 300 }}>
-            Login
-          </Button>
+          <Link href="/signup" passHref>
+            <Button variant="contained" sx={{ width: 300 }}>
+              Get Started
+            </Button>
+          </Link>
+          <Link href="/login" passHref>
+            <Button color="secondary" sx={{ width: 300 }}>
+              Login
+            </Button>
+          </Link>
         </Stack>
       </Box>
     </PageLayout>
