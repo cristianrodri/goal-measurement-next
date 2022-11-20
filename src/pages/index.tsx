@@ -34,7 +34,7 @@ const Home: NextPage = () => {
           gap={theme => theme.spacing(2)}
           flexWrap="wrap"
         >
-          <Button href="/login" variant="contained" sx={{ width: 300 }}>
+          <Button href="/signup" variant="contained" sx={{ width: 300 }}>
             Get Started
           </Button>
           <Button href="/login" color="secondary" sx={{ width: 300 }}>

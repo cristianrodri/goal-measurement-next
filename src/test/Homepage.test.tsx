@@ -31,4 +31,18 @@ describe('Homepage', () => {
       })
     ).toBeInTheDocument()
   })
+
+  it('should have the "singup" href in signup button link', () => {
+    expect(screen.getByRole('link', { name: /get started/i })).toHaveAttribute(
+      'href',
+      '/signup'
+    )
+  })
+
+  it('should have the "login" href in login button link', () => {
+    expect(screen.getByRole('link', { name: /login/i })).toHaveAttribute(
+      'href',
+      '/login'
+    )
+  })
 })
