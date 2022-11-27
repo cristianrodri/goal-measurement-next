@@ -1,19 +1,21 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 import Link from 'next/link'
-import { Button } from '@mui/material'
+import { Box, Button } from '@mui/material'
 
 export const Logo = () => {
   return (
-    <Link href="/" passHref>
-      <Button>
-        <Image
-          src="/logo.svg"
-          width="0"
-          height="0"
-          style={{ width: '200px', height: 'auto' }}
-          alt="logo"
-        />
-      </Button>
-    </Link>
+    <Box sx={{ alignSelf: 'start' }}>
+      <Link href="/" passHref>
+        <Button LinkComponent="a">
+          <Image
+            src="/logo.svg"
+            width="0"
+            height="0"
+            style={{ width: 250, height: 'auto' }}
+            alt="logo"
+          />
+        </Button>
+      </Link>
+    </Box>
   )
 }
